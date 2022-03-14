@@ -65,6 +65,9 @@ public class CodeTreeVisitor {
         if (name.endsWith("Context")) {
             return name.substring(0, name.length() - 7);
         }
+        if (name.endsWith("Impl")) {
+            return name.substring(0, name.length() - 4);
+        }
         return name;
     }
 }
