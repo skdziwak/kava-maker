@@ -19,7 +19,7 @@ public class Main {
             System.exit(1);
         }
         if (args[0].equalsIgnoreCase("assemble")) {
-            String json = Files.readString(Path.of("main.json"));
+            String json = new String(IOUtils.toByteArray(System.in), StandardCharsets.UTF_8);
             ObjectMapper objectMapper = new ObjectMapper();
             Node node = objectMapper.readValue(json, Node.class);
             System.out.print(node);
